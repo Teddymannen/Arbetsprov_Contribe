@@ -2,15 +2,17 @@
 <html>
     <head>
         <meta charset="utf-8">
-        <title>Contribe Arbetsprov</title>
+        <title>Contribr - Contribe Arbetsprov</title>
+        <link rel="stylesheet" type="text/css" href="Style.css">
+        <script src="Script.js"></script>
     </head>
     <body>
-        <form>
+        <form action="javascript:flickr_ing()">
           <p>Search Flickr for Images:</p>
-          <input type="search" name="flickrSearch">
-          <input type="submit" value="Search">
+          <input type="search" name="flickrSearch" id="mySearch">
+          <input type="submit" value="Search" id="searchButton">
         </form>
-        <div class="container">
+        <div id="container">
             <!-- Här ska Flickr-bilderna visas efter sökning.
             De ska kunna markeras genom att klickas på för att sedan läggas
             i ett galleri med en knapptrycking. Där ska bilderna vara i
