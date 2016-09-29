@@ -7,11 +7,12 @@
         <script src="Script.js"></script>
     </head>
     <body>
-        <form action="javascript:flickr_ing()">
-          <p>Search Flickr for Images:</p>
-          <input type="search" name="flickrSearch" id="mySearch">
-          <input type="submit" value="Search" id="searchButton">
+        <form action="javascript:image_search()">
+        	<p>Search Flickr for Images:</p>
+        	<input type="search" name="flickrSearch" id="mySearch">
+        	<input type="submit" value="Search" id="searchButton">
         </form>
+        <button type="button" onclick="image_filter()">View Gallery</button>
         <div id="container">
             <!-- Här ska Flickr-bilderna visas efter sökning.
             De ska kunna markeras genom att klickas på för att sedan läggas
