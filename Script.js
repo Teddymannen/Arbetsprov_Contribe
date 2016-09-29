@@ -7,6 +7,11 @@ function image_search() {
 	selected_size = 150; // Initial image size (width).
 
 	container.innerHTML = ""; // clear the container before searching for more images.
+	document.getElementById("note2_p").style.visibility = "hidden";
+	document.getElementById("note2_p").style.position = "absolute";
+	document.getElementById("note_p").style.visibility = "visible";
+	document.getElementById("note_p").style.position = "static";
+
 
 	var request = new XMLHttpRequest();
 	request.open("GET", apiurl, true);
@@ -74,6 +79,11 @@ function image_mark() { // Toggle the classname between 'unmarked' and 'marked'.
 }
 
 function image_filter() { // Filters away all images that hasn't been marked.
+	document.getElementById("note_p").style.visibility = "hidden";
+	document.getElementById("note_p").style.position = "absolute";
+	document.getElementById("note2_p").style.visibility = "visible";
+	document.getElementById("note2_p").style.position = "static";
+
 	var unmarked = document.getElementsByClassName("unmarked"); // Removing all non-marked p-elements.
 	while (unmarked[0]) {
 		unmarked[0].parentNode.removeChild(unmarked[0]);
